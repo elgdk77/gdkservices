@@ -256,6 +256,7 @@
     .contact-list small { display: block; color: var(--muted); font-size: .85rem; }
 
     form { display: grid; gap: 18px; }
+    .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
     label { font-weight: 600; display: block; margin-bottom: 6px; }
     input, textarea {
       width: 100%; font: inherit; color: var(--text); background: var(--surface);
@@ -568,7 +569,11 @@
             <li><a href="https://github.com/elgdk77/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg><span><small>GitHub</small>elgdk77<span class="visually-hidden"> (opens in a new tab)</span></span></a></li>
           </ul>
 
-          <form id="contact-form" action="mailto:gavinknowles@gmail.com" method="post" enctype="text/plain" novalidate>
+          <form id="contact-form" action="/api/contact" method="post" novalidate>
+            <div class="hp" aria-hidden="true">
+              <label for="cf-website">Leave this field empty</label>
+              <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
             <div>
               <label for="cf-name">Name</label>
               <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-err">
@@ -590,7 +595,7 @@
                 Send message
               </button>
             </div>
-            <p class="hint">Sending opens your email app with your message ready to go.</p>
+            <p class="hint" id="cf-status" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -641,7 +646,7 @@
         ['products', 'services', 'resume', 'contact'].forEach(function (id) { obs.observe(document.getElementById(id)); });
       }
 
-      // Contact form: validate, then open the visitor's mail client
+      // Contact form: validate, then send via the server (Postmark)
       var form = document.getElementById('contact-form');
       var fields = {
         name: { el: form.elements.name, msg: 'Please enter your name.' },
@@ -659,10 +664,29 @@
           if (!ok && !firstInvalid) firstInvalid = f.el;
         });
         if (firstInvalid) { firstInvalid.focus(); return; }
-        var name = fields.name.el.value.trim();
-        var subject = 'Website enquiry from ' + name;
-        var body = fields.message.el.value.trim() + '\n\n' + name + '\n' + fields.email.el.value.trim();
-        window.location.href = 'mailto:gavinknowles@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        var status = document.getElementById('cf-status');
+        var button = form.querySelector('button[type="submit"]');
+        button.disabled = true;
+        status.textContent = 'Sending…';
+        fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: fields.name.el.value.trim(),
+            email: fields.email.el.value.trim(),
+            message: fields.message.el.value.trim(),
+            website: form.elements.website.value
+          })
+        }).then(function (r) {
+          return r.json().catch(function () { return {}; }).then(function (data) {
+            if (!r.ok) throw new Error(data.error || 'Sorry, the message could not be sent.');
+          });
+        }).then(function () {
+          form.reset();
+          status.textContent = 'Thanks, your message has been sent. I\'ll get back to you soon.';
+        }).catch(function (err) {
+          status.textContent = (err && err.message ? err.message : 'Sorry, the message could not be sent.') + ' You can also email gavinknowles@gmail.com directly.';
+        }).then(function () { button.disabled = false; });
       });
 
       document.getElementById('year').textContent = new Date().getFullYear();

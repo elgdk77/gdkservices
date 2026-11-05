@@ -1,0 +1,12 @@
+{
+  "name": "gdkservices",
+  "private": true,
+  "description": "Portfolio site with a Postmark-backed contact form",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
