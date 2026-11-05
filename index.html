@@ -1,710 +1,391 @@
 <!doctype html>
-<html lang="en-GB">
+<html lang="en-GB" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gavin Knowles | IT Support &amp; Infrastructure Engineer | AI Developer</title>
-  <meta name="description" content="Gavin Knowles, a Norwich-based IT Support &amp; Infrastructure Engineer and AI Developer with over 20 years' experience in infrastructure, cloud, testing and software delivery. View projects, services and CV.">
+  <title>Gavin Knowles | AI Developer, IT Support Engineer &amp; Performance Tester</title>
+  <meta name="description" content="Gavin Knowles is a Norwich-based AI developer, IT support &amp; infrastructure engineer and performance tester with 20+ years across infrastructure, cloud, testing and software delivery.">
   <meta name="author" content="Gavin David Knowles">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#0f1419" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0a0b0d">
 
-  <!-- Open Graph / LinkedIn preview -->
-  <!-- PLACEHOLDER: replace [ADD SITE URL] with the live address, e.g. https://example.co.uk/ -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Gavin Knowles | IT Support &amp; Infrastructure Engineer | AI Developer">
-  <meta property="og:description" content="Over 20 years in infrastructure, cloud, testing and software delivery, now building and deploying AI applications. Based in Norwich, UK.">
-  <meta property="og:url" content="[ADD SITE URL]">
-  <!-- PLACEHOLDER: add a 1200x630 image named og-image.png next to this file and use its absolute URL -->
-  <meta property="og:image" content="[ADD SITE URL]og-image.png">
-  <meta property="og:image:alt" content="Gavin Knowles, IT Support &amp; Infrastructure Engineer and AI Developer">
+  <!-- SEO / Open Graph (LinkedIn uses og:*). Site URL confirmed live at https://gdkservices.co.uk/ — change here if the domain moves. -->
+  <link rel="canonical" href="https://gdkservices.co.uk/">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Gavin Knowles">
+  <meta property="og:title" content="Gavin Knowles | AI Developer, IT Support &amp; Performance Testing">
+  <meta property="og:description" content="20+ years in infrastructure, cloud, testing and software delivery, now building and shipping AI applications. Based in Norwich, UK.">
+  <meta property="og:url" content="https://gdkservices.co.uk/">
+  <meta property="og:image" content="https://gdkservices.co.uk/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Gavin Knowles: AI Developer, IT Support Engineer and Performance Tester">
   <meta property="og:locale" content="en_GB">
+  <meta property="profile:first_name" content="Gavin">
+  <meta property="profile:last_name" content="Knowles">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="[ADD SITE URL]">
+  <meta name="twitter:title" content="Gavin Knowles | AI Developer, IT Support &amp; Performance Testing">
+  <meta name="twitter:description" content="20+ years in infrastructure, cloud, testing and software delivery, now building and shipping AI applications.">
+  <meta name="twitter:image" content="https://gdkservices.co.uk/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Gavin David Knowles",
+    "url": "https://gdkservices.co.uk/",
+    "jobTitle": "AI Developer, IT Support Engineer and Performance Tester",
+    "address": { "@type": "PostalAddress", "addressLocality": "Norwich", "addressCountry": "GB" },
+    "sameAs": ["https://www.linkedin.com/in/gavin-knowles-a7ba4b8/", "https://github.com/elgdk77/"]
+  }
+  </script>
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EGK%3C/text%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0b0d'/%3E%3Ctext x='32' y='42' font-family='Menlo,monospace' font-size='26' font-weight='700' fill='%23c5f82a' text-anchor='middle'%3EGK%3C/text%3E%3C/svg%3E">
 
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --surface: #ffffff;
-      --surface-2: #eef1f5;
-      --text: #14181f;
-      --muted: #4a5361;
-      --border: #d9dee6;
-      --accent: #1d4ed8;
-      --accent-strong: #1e40af;
-      --accent-soft: #e3ebff;
-      --on-accent: #ffffff;
-      --focus: #b45309;
-      --shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 4px 12px rgba(16, 24, 40, .06);
-      --radius: 12px;
-      --max: 1120px;
-      --nav-h: 64px;
-      font-synthesis: none;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f1419;
-        --surface: #171d25;
-        --surface-2: #1f2731;
-        --text: #e8ecf1;
-        --muted: #a9b3c1;
-        --border: #2c3643;
-        --accent: #7aa2ff;
-        --accent-strong: #a5c0ff;
-        --accent-soft: #1c2a47;
-        --on-accent: #0b1220;
-        --focus: #fbbf24;
-        --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
-      }
-    }
+  <!-- Fonts are self-hosted (assets/fonts) to avoid render-blocking third-party requests -->
+  <link rel="preload" href="assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/jetbrains-mono-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <link rel="modulepreload" href="assets/vendor/motion-14.5.0.min.js">
 
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 16px); -webkit-text-size-adjust: 100%; }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      font-size: 1.0625rem;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-    img, svg { display: block; max-width: 100%; }
-    a { color: var(--accent); text-underline-offset: 3px; }
-    a:hover { color: var(--accent-strong); }
-    :focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
-    h1, h2, h3 { line-height: 1.2; margin: 0 0 .5em; letter-spacing: -.01em; }
-    h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
-    h3 { font-size: 1.15rem; }
-    p { margin: 0 0 1em; }
-    ul { margin: 0; padding-left: 1.2em; }
-
-    .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 16px; }
-    @media (min-width: 640px) { .container { padding: 0 24px; } }
-
-    .skip-link {
-      position: absolute; left: 16px; top: -100px; z-index: 100;
-      background: var(--accent); color: var(--on-accent); padding: 10px 16px; border-radius: 8px; font-weight: 600;
-    }
-    .skip-link:focus { top: 12px; color: var(--on-accent); }
-
-    /* ---------- Navigation ---------- */
-    .site-header {
-      position: sticky; top: 0; z-index: 50;
-      background: color-mix(in srgb, var(--bg) 88%, transparent);
-      backdrop-filter: saturate(160%) blur(10px);
-      -webkit-backdrop-filter: saturate(160%) blur(10px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav { display: flex; align-items: center; justify-content: space-between; height: var(--nav-h); gap: 16px; }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--text); text-decoration: none; }
-    .brand-mark {
-      width: 36px; height: 36px; border-radius: 9px; display: grid; place-items: center;
-      background: var(--accent); color: var(--on-accent); font-size: .95rem; letter-spacing: .02em;
-    }
-    .nav-toggle {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: transparent; color: var(--text); border: 1px solid var(--border); border-radius: 8px;
-      padding: 8px 12px; font: inherit; font-size: .95rem; cursor: pointer;
-    }
-    .nav-toggle svg { width: 20px; height: 20px; }
-    .nav-menu {
-      list-style: none; margin: 0; padding: 8px 16px 16px;
-      position: absolute; left: 0; right: 0; top: var(--nav-h);
-      background: var(--surface); border-bottom: 1px solid var(--border); box-shadow: var(--shadow);
-      display: none;
-    }
-    .nav-menu.open { display: block; }
-    .nav-menu a {
-      display: block; padding: 12px 8px; color: var(--text); text-decoration: none; font-weight: 500;
-      border-radius: 8px;
-    }
-    .nav-menu a:hover, .nav-menu a[aria-current="true"] { background: var(--surface-2); color: var(--accent); }
-    @media (min-width: 820px) {
-      .nav-toggle { display: none; }
-      .nav-menu, .nav-menu.open {
-        display: flex; position: static; padding: 0; gap: 4px;
-        background: transparent; border: 0; box-shadow: none;
-      }
-      .nav-menu a { padding: 8px 12px; font-size: .97rem; }
-    }
-
-    /* ---------- Buttons ---------- */
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      padding: 12px 20px; border-radius: 10px; font-weight: 600; font-size: 1rem; text-decoration: none;
-      border: 2px solid var(--accent); cursor: pointer; font-family: inherit; min-height: 48px;
-      transition: background-color .15s, color .15s, border-color .15s;
-    }
-    .btn svg { width: 18px; height: 18px; flex: none; }
-    .btn-primary { background: var(--accent); color: var(--on-accent); }
-    .btn-primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); color: var(--on-accent); }
-    .btn-secondary { background: transparent; color: var(--accent); }
-    .btn-secondary:hover { background: var(--accent-soft); color: var(--accent-strong); }
-
-    /* ---------- Sections ---------- */
-    section { padding: 72px 0; }
-    @media (min-width: 820px) { section { padding: 96px 0; } }
-    section:nth-of-type(even) { background: var(--surface-2); }
-    .eyebrow {
-      display: inline-block; font-size: .8rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-      color: var(--accent); margin-bottom: 8px;
-    }
-    .section-intro { color: var(--muted); max-width: 62ch; margin-bottom: 40px; }
-
-    /* ---------- Hero ---------- */
-    .hero { padding: 72px 0 80px; }
-    @media (min-width: 820px) { .hero { padding: 112px 0 120px; } }
-    .hero-grid { display: grid; gap: 40px; align-items: center; }
-    @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.5fr 1fr; gap: 56px; } }
-    .hero h1 { font-size: clamp(2.1rem, 6vw, 3.4rem); margin-bottom: .25em; }
-    .hero .headline { font-size: clamp(1.1rem, 2.4vw, 1.35rem); font-weight: 600; color: var(--accent); margin-bottom: 1em; }
-    .hero .value { font-size: clamp(1.1rem, 2.2vw, 1.25rem); max-width: 40ch; }
-    .hero .bio { color: var(--muted); max-width: 60ch; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-    .hero-meta { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 24px; color: var(--muted); font-size: .95rem; padding: 0; list-style: none; }
-    .hero-meta li { display: inline-flex; align-items: center; gap: 6px; }
-    .hero-meta svg { width: 16px; height: 16px; }
-
-    .facts {
-      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow);
-      padding: 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
-    }
-    .fact strong { display: block; font-size: 1.75rem; line-height: 1.1; color: var(--text); }
-    .fact span { color: var(--muted); font-size: .9rem; }
-
-    /* ---------- Cards ---------- */
-    .grid { display: grid; gap: 20px; }
-    @media (min-width: 700px) { .grid-2 { grid-template-columns: repeat(2, 1fr); } .grid-3 { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1000px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
-    .card {
-      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 24px; box-shadow: var(--shadow); display: flex; flex-direction: column;
-    }
-    .card p { color: var(--muted); }
-    .card .problem { font-size: .95rem; }
-    .card .problem strong { color: var(--text); }
-    .tags { list-style: none; padding: 0; margin: 4px 0 20px; display: flex; flex-wrap: wrap; gap: 6px; }
-    .tags li {
-      font-size: .8rem; font-weight: 600; padding: 4px 10px; border-radius: 999px;
-      background: var(--accent-soft); color: var(--accent-strong);
-    }
-    .card-links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px 20px; }
-    .card-links a { font-weight: 600; display: inline-flex; align-items: center; gap: 6px; }
-    .card-links svg { width: 16px; height: 16px; }
-    .placeholder {
-      background: #fff3c4; color: #5c4400; padding: 0 4px; border-radius: 4px; font-weight: 600; font-size: .92em;
-    }
-    @media (prefers-color-scheme: dark) { .placeholder { background: #4a3b00; color: #ffe08a; } }
-
-    .service-icon {
-      width: 48px; height: 48px; border-radius: 10px; display: grid; place-items: center;
-      background: var(--accent-soft); color: var(--accent); margin-bottom: 16px;
-    }
-    .service-icon svg { width: 26px; height: 26px; }
-
-    /* ---------- Resume ---------- */
-    .resume-block + .resume-block { margin-top: 64px; }
-    .timeline { list-style: none; padding: 0; margin: 0; position: relative; }
-    .timeline::before {
-      content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: var(--border);
-    }
-    .timeline > li { position: relative; padding-left: 36px; }
-    .timeline > li + li { margin-top: 28px; }
-    .timeline > li::before {
-      content: ""; position: absolute; left: 0; top: 8px; width: 16px; height: 16px; border-radius: 50%;
-      background: var(--surface); border: 3px solid var(--accent);
-    }
-    .timeline .card { padding: 20px 24px; }
-    .role-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; margin-bottom: 8px; }
-    .role-head h4 { margin: 0; font-size: 1.1rem; }
-    .employer { color: var(--muted); font-weight: 500; }
-    .dates { color: var(--muted); font-size: .92rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
-    .timeline ul li { color: var(--muted); }
-    .timeline ul li + li { margin-top: 6px; }
-    .timeline ul li strong { color: var(--text); }
-    .resume-block > h3 { font-size: 1.35rem; margin-bottom: 20px; }
-
-    .cert-list { list-style: none; padding: 0; display: grid; gap: 12px; }
-    @media (min-width: 700px) { .cert-list { grid-template-columns: repeat(2, 1fr); } }
-    .cert-list li {
-      background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px;
-      display: flex; gap: 12px; align-items: flex-start;
-    }
-    .cert-list svg { width: 22px; height: 22px; color: var(--accent); flex: none; margin-top: 2px; }
-    .cert-list .sub { display: block; color: var(--muted); font-size: .9rem; }
-    .status { display: inline-block; font-size: .75rem; font-weight: 700; padding: 1px 8px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); margin-left: 4px; }
-
-    .skills h4 { margin: 0 0 12px; font-size: 1rem; }
-    .skills .tags { margin-bottom: 0; }
-
-    /* ---------- Contact ---------- */
-    .contact-grid { display: grid; gap: 32px; }
-    @media (min-width: 900px) { .contact-grid { grid-template-columns: 1fr 1.3fr; gap: 48px; } }
-    .contact-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-    .contact-list a {
-      display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 10px;
-      background: var(--surface); border: 1px solid var(--border); text-decoration: none; color: var(--text);
-      word-break: break-word;
-    }
-    .contact-list a:hover { border-color: var(--accent); }
-    .contact-list svg { width: 22px; height: 22px; color: var(--accent); flex: none; }
-    .contact-list small { display: block; color: var(--muted); font-size: .85rem; }
-
-    form { display: grid; gap: 18px; }
-    .hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
-    label { font-weight: 600; display: block; margin-bottom: 6px; }
-    input, textarea {
-      width: 100%; font: inherit; color: var(--text); background: var(--surface);
-      border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; min-height: 48px;
-    }
-    input:hover, textarea:hover { border-color: var(--muted); }
-    input:focus-visible, textarea:focus-visible { outline: 3px solid var(--focus); outline-offset: 1px; border-color: var(--accent); }
-    textarea { min-height: 160px; resize: vertical; }
-    .hint { color: var(--muted); font-size: .9rem; margin: 0; }
-    .error { color: #b91c1c; font-size: .9rem; margin-top: 6px; min-height: 0; }
-    @media (prefers-color-scheme: dark) { .error { color: #fca5a5; } }
-    [aria-invalid="true"] { border-color: #b91c1c; }
-
-    /* ---------- Footer ---------- */
-    footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); font-size: .92rem; }
-    footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
-
-    .visually-hidden {
-      position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
-      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
-    }
-  </style>
+  <script>
+    // Mark JS as available so reveal styles apply; if the motion script never
+    // starts (old browser, blocked file) the failsafe shows everything anyway.
+    document.documentElement.className = 'js';
+    setTimeout(function () { if (!window.__motionReady) document.documentElement.classList.add('motion-failed'); }, 2500);
+  </script>
+  <script type="module" src="assets/site.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <!-- Reusable icons -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4 10 14"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></symbol>
     <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.08-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.82 1.19 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
     <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
-    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12.5 2.8 2.8L16.5 9.5"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m6 13 6 6 6-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
   </svg>
 
+  <!-- ================= NAV ================= -->
   <header class="site-header">
     <nav class="container nav" aria-label="Main">
-      <a class="brand" href="#top" aria-label="Gavin Knowles, back to top">
+      <a class="brand" href="#top">
         <span class="brand-mark" aria-hidden="true">GK</span>
-        <span>Gavin Knowles</span>
+        <span class="brand-name">Gavin Knowles</span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="bars" d="M4 7h16M4 12h16M4 17h16"/></svg>
-        Menu
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span>Menu</span>
       </button>
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="#products">Products</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#resume">Resume</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
-    <!-- ================= HERO ================= -->
+    <!-- ================= HERO =================
+         Entrance: CSS keyframes in site.css (.hero [data-enter]) so it starts on first paint.
+         Signature element: the cursor-reactive dot grid (<canvas class="hero-grid">), driven by initHeroGrid() in site.js. -->
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div>
-          <h1 id="hero-title">Gavin David Knowles</h1>
-          <p class="headline">IT Support &amp; Infrastructure Engineer | AI Developer</p>
-          <p class="value">I keep IT infrastructure running reliably, and I build AI-powered tools that turn business problems into software people rely on.</p>
-          <!-- Bio drafted from your CV; replace with your own wording if you prefer -->
-          <p class="bio">I have over 20 years' experience across infrastructure, cloud, testing and software delivery. That includes six years as Environment Manager for a business-critical platform supporting more than 500 users. Today I build and deploy Generative AI applications, and I bring a calm, methodical approach, PRINCE2 Practitioner and CompTIA A+ certifications to every project.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#products">
-              View my work
-              <svg aria-hidden="true"><use href="#i-arrow"/></svg>
-            </a>
-            <!-- PLACEHOLDER: add your CV as Gavin_Knowles_CV.pdf next to index.html -->
-            <a class="btn btn-secondary" href="Gavin_Knowles_CV.pdf" download>
-              <svg aria-hidden="true"><use href="#i-download"/></svg>
-              Download CV
-            </a>
+      <canvas class="hero-grid" aria-hidden="true"></canvas>
+      <div class="container hero-inner">
+        <p class="eyebrow" data-enter="0"><span class="status-dot" aria-hidden="true"></span>Open to new roles · Norwich, UK</p>
+        <h1 id="hero-title" class="hero-title">
+          <span class="line"><span data-enter="1">Gavin</span></span>
+          <span class="line"><span data-enter="2">Knowles<span class="accent">.</span></span></span>
+        </h1>
+        <p class="hero-roles" data-enter="3">
+          <span>AI Developer</span><span class="sep" aria-hidden="true">/</span><span>IT Support Engineer</span><span class="sep" aria-hidden="true">/</span><span>Performance Tester</span>
+        </p>
+        <p class="hero-sub" data-enter="4">I build and ship AI applications, keep business-critical infrastructure running, and find performance bottlenecks before users do. 20+ years across IT, cloud, testing and software delivery.</p>
+        <div class="hero-actions" data-enter="5">
+          <a class="btn btn-primary" href="#work" data-magnetic><span>See my work</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#contact" data-magnetic><span>Get in touch</span></a>
+        </div>
+        <ul class="hero-links" data-enter="6" aria-label="Quick contact">
+          <li><a href="mailto:gavinknowles@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>gavinknowles@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/gavin-knowles-a7ba4b8/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          <li><a href="https://github.com/elgdk77/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+          <!-- PLACEHOLDER: add your CV as Gavin_Knowles_CV.pdf in the project root (server.js already serves it) -->
+          <li><a href="Gavin_Knowles_CV.pdf" download><svg aria-hidden="true"><use href="#i-download"/></svg>CV (PDF)</a></li>
+        </ul>
+      </div>
+      <div class="container">
+        <dl class="stats" data-enter="7">
+          <div><dt>Years in IT &amp; delivery</dt><dd>20+</dd></div>
+          <div><dt>Users on a platform I ran</dt><dd>500+</dd></div>
+          <div><dt>VMs managed in private cloud</dt><dd>300+</dd></div>
+          <div><dt>Lines shipped in a live SaaS</dt><dd>46k</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ================= FEATURED WORK =================
+         To add/remove a project: copy one <article class="project"> block below and edit it.
+         The first article is shown large ("project--feature"); the rest flow into a two-column grid.
+         Screenshots: put 1600x1000 images in assets/projects/ and update the <img src>.
+         Motion: cards reveal on scroll (data-reveal), tilt on hover (data-tilt), image parallax (data-parallax). -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="kicker"><span>01</span> Featured work</p>
+          <h2 id="work-title">Things I've built and run</h2>
+          <p class="section-intro">Working software I've designed, built and shipped, from a live SaaS product to open-source AI agents.</p>
+        </header>
+
+        <div class="projects">
+          <article class="project project--feature" data-reveal data-tilt>
+            <div class="project-media">
+              <div class="project-media-inner" data-parallax>
+                <!-- PLACEHOLDER: replace with a real screenshot, e.g. assets/projects/services-crm.webp (1600x1000) -->
+                <img src="assets/projects/services-crm.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Services CRM dashboard showing enquiries, quotes and invoices">
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-meta"><span>Live SaaS</span><span>2025 – now</span></p>
+              <h3>Services CRM</h3>
+              <p>A multi-tenant SaaS application that takes services businesses from first enquiry to paid invoice.</p>
+              <p class="problem"><strong>Problem solved</strong> Enquiries, quotes, scheduling, invoicing and payments in one place, with branded PDF quotes and automated payment reminders. Per-tenant data isolation and hardened authentication.</p>
+              <ul class="tags" aria-label="Technologies">
+                <li>React</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>Docker</li><li>Stripe</li><li>Postmark</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://services-crm.co.uk" target="_blank" rel="noopener">Visit site<svg aria-hidden="true"><use href="#i-ext"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-reveal data-tilt>
+            <div class="project-media">
+              <div class="project-media-inner" data-parallax>
+                <!-- PLACEHOLDER: replace with a real screenshot, e.g. assets/projects/prompt-improver.webp (1600x1000) -->
+                <img src="assets/projects/prompt-improver.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Prompt Improver showing an original prompt beside its rewritten version">
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-meta"><span>AI agent</span><span>Open source</span></p>
+              <h3>Prompt Improver</h3>
+              <p>An AI agent that diagnoses weak or misbehaving prompts and rewrites them, explaining what changed and why.</p>
+              <p class="problem"><strong>Problem solved</strong> Turns prompts that give inconsistent results into reliable, ready-to-copy ones, with a versioned prompt library and token counts before anything ships.</p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Python</li><li>FastAPI</li><li>Claude API</li><li>Anthropic SDK</li><li>Server-sent events</li><li>pytest</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://prompt-improver.gdkservices.co.uk/" target="_blank" rel="noopener">Live app<svg aria-hidden="true"><use href="#i-ext"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a>
+                <a href="https://github.com/elgdk77/PromptEngineering" target="_blank" rel="noopener">Source<svg aria-hidden="true"><use href="#i-github"/></svg><span class="visually-hidden"> on GitHub (opens in a new tab)</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-reveal data-tilt>
+            <div class="project-media">
+              <div class="project-media-inner" data-parallax>
+                <!-- PLACEHOLDER: replace with a real screenshot, e.g. assets/projects/agentic-ai.webp (1600x1000) -->
+                <img src="assets/projects/agentic-ai.svg" width="1600" height="1000" loading="lazy" decoding="async" alt="Document Q&amp;A agent answering a question with cited source pages">
+              </div>
+            </div>
+            <div class="project-body">
+              <p class="project-meta"><span>AI agent · RAG</span><span>Open source</span></p>
+              <h3>AgenticAI: Document Q&amp;A</h3>
+              <p>An AI agent that answers plain-English questions about your own PDF, Word and text documents, citing the source document and page.</p>
+              <p class="problem"><strong>Problem solved</strong> Trustworthy answers from your own documents without manual searching. Each user gets a private workspace, and the agent defends against prompt injection.</p>
+              <ul class="tags" aria-label="Technologies">
+                <li>Python</li><li>FastAPI</li><li>LangChain</li><li>LangGraph</li><li>Claude API</li><li>Chroma</li><li>RAG</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/elgdk77/AgenticAI" target="_blank" rel="noopener">Source<svg aria-hidden="true"><use href="#i-github"/></svg><span class="visually-hidden"> on GitHub (opens in a new tab)</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="kicker"><span>02</span> Skills &amp; tech</p>
+          <h2 id="skills-title">Three disciplines, one toolkit</h2>
+          <p class="section-intro">Building software, running the infrastructure under it, and proving it holds up under load.</p>
+        </header>
+
+        <div class="skill-grid" data-reveal-group>
+          <article class="skill-card">
+            <p class="skill-index" aria-hidden="true">A</p>
+            <h3>AI development</h3>
+            <p>I turn ideas into working software quickly with AI-assisted development, directing the architecture and security decisions myself and reviewing and testing every change.</p>
+            <ul class="tags" aria-label="AI development skills">
+              <li>Python</li><li>FastAPI</li><li>Claude API</li><li>Claude Code</li><li>LangChain</li><li>LangGraph</li><li>RAG</li><li>Prompt Engineering</li><li>Node.js</li><li>React</li><li>JavaScript</li><li>PostgreSQL</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <p class="skill-index" aria-hidden="true">B</p>
+            <h3>IT support &amp; infrastructure</h3>
+            <p>Helpdesk support, networking and Microsoft 365 administration that keep people productive and systems secure, backed by years of Windows Server and Active Directory work.</p>
+            <ul class="tags" aria-label="IT support and infrastructure skills">
+              <li>Microsoft 365</li><li>Windows Server</li><li>Active Directory</li><li>Linux</li><li>VMware</li><li>Hyper-V</li><li>DNS</li><li>DHCP</li><li>TCP/IP</li><li>Firewalls</li><li>F5 Load Balancers</li><li>Cisco IOS</li><li>Wireshark</li><li>Backup &amp; Recovery</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <p class="skill-index" aria-hidden="true">C</p>
+            <h3>Performance &amp; quality testing</h3>
+            <p>I find the bottlenecks in applications and infrastructure with JMeter load tests, then work alongside development and infrastructure teams to get them fixed.</p>
+            <ul class="tags" aria-label="Testing skills">
+              <li>JMeter</li><li>LoadRunner</li><li>Performance Testing</li><li>Selenium</li><li>Playwright</li><li>Serenity BDD</li><li>pytest</li><li>Test Automation</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="skill-strip" data-reveal>
+          <div>
+            <h3>Cloud &amp; DevOps</h3>
+            <ul class="tags" aria-label="Cloud and DevOps skills"><li>AWS</li><li>Azure</li><li>Docker</li><li>Kubernetes</li><li>Terraform</li><li>Ansible</li><li>Jenkins</li><li>CI/CD</li><li>Git &amp; GitHub</li><li>PowerShell</li></ul>
           </div>
-          <ul class="hero-meta">
-            <li><svg aria-hidden="true"><use href="#i-pin"/></svg> Norwich, UK</li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg> British citizen, full right to work</li>
-          </ul>
-        </div>
-        <div class="facts" role="list" aria-label="Career highlights">
-          <div class="fact" role="listitem"><strong>20+</strong><span>years in IT and software delivery</span></div>
-          <div class="fact" role="listitem"><strong>500+</strong><span>users supported on a business-critical platform</span></div>
-          <div class="fact" role="listitem"><strong>300+</strong><span>virtual machines managed in a private cloud</span></div>
-          <div class="fact" role="listitem"><strong>46,000</strong><span>lines of code shipped in a live SaaS product</span></div>
+          <div>
+            <h3>Operations &amp; delivery</h3>
+            <ul class="tags" aria-label="Operations and delivery skills"><li>Incident Management</li><li>Root Cause Analysis</li><li>Environment Management</li><li>Release Management</li><li>JIRA &amp; Confluence Admin</li><li>PRINCE2</li></ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= PRODUCTS ================= -->
-    <section id="products" aria-labelledby="products-title">
-      <div class="container">
-        <span class="eyebrow">Products</span>
-        <h2 id="products-title">Things I've built and run</h2>
-        <p class="section-intro">Working software I've designed, built and shipped, from live SaaS products to open-source AI tools.</p>
+    <!-- ================= ABOUT ================= -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <header class="section-head about-head" data-reveal>
+          <p class="kicker"><span>03</span> About</p>
+          <h2 id="about-title">Calm, methodical, and hands-on for 20+ years</h2>
+          <div class="about-bio">
+            <p>I've spent over 20 years across infrastructure, cloud, testing and software delivery, including six years as Environment Manager for a business-critical platform supporting more than 500 users.</p>
+            <p>Today I build and deploy Generative AI applications, and I bring the same calm, methodical approach to every project, backed by PRINCE2 Practitioner and CompTIA A+ certifications.</p>
+            <p class="about-facts"><span>Norwich, UK</span><span>British citizen, full right to work</span></p>
+          </div>
+        </header>
 
-        <div class="grid grid-3">
-          <article class="card">
-            <h3>Services CRM</h3>
-            <p>A multi-tenant SaaS application that takes services businesses from first enquiry to paid invoice.</p>
-            <p class="problem"><strong>Problem solved:</strong> it brings enquiries, quotes, scheduling, invoicing and payments into one place, with branded PDF quotes and automated payment reminders.</p>
-            <ul class="tags" aria-label="Technologies">
-              <li>React</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>Docker</li><li>Stripe</li><li>Postmark</li>
-            </ul>
-            <div class="card-links">
-              <a href="https://services-crm.co.uk" target="_blank" rel="noopener">Visit site <svg aria-hidden="true"><use href="#i-ext"/></svg><span class="visually-hidden">(opens in a new tab)</span></a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>Prompt Improver</h3>
-            <p>An AI agent that diagnoses weak or misbehaving prompts and rewrites them, explaining what changed and why.</p>
-            <p class="problem"><strong>Problem solved:</strong> it turns prompts that give inconsistent or wrong results into reliable, ready-to-copy prompts. It also keeps a versioned library of saved prompts and measures each prompt's token count before it ships.</p>
-            <ul class="tags" aria-label="Technologies">
-              <li>Python</li><li>FastAPI</li><li>Claude API</li><li>Anthropic SDK</li><li>JavaScript</li><li>Server-sent events</li><li>pytest</li>
-            </ul>
-            <div class="card-links">
-              <a href="https://prompt-improver.gdkservices.co.uk/" target="_blank" rel="noopener">Live app <svg aria-hidden="true"><use href="#i-ext"/></svg><span class="visually-hidden">(opens in a new tab)</span></a>
-              <a href="https://github.com/elgdk77/PromptEngineering" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg> Source code<span class="visually-hidden"> on GitHub (opens in a new tab)</span></a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>AgenticAI: Document Q&amp;A Agent</h3>
-            <p>An AI agent that answers plain-English questions about your own PDF, Word and text documents, and cites the source document and page.</p>
-            <p class="problem"><strong>Problem solved:</strong> it finds trustworthy answers in your own documents without manual searching. Each user gets a private workspace, and the agent defends against prompt injection.</p>
-            <ul class="tags" aria-label="Technologies">
-              <li>Python</li><li>FastAPI</li><li>LangChain</li><li>LangGraph</li><li>Claude API</li><li>Chroma</li><li>RAG</li><li>pytest</li>
-            </ul>
-            <div class="card-links">
-              <a href="https://github.com/elgdk77/AgenticAI" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg> Source code<span class="visually-hidden"> on GitHub (opens in a new tab)</span></a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= SERVICES ================= -->
-    <section id="services" aria-labelledby="services-title">
-      <div class="container">
-        <span class="eyebrow">Services</span>
-        <h2 id="services-title">How I can help</h2>
-        <p class="section-intro">Practical, well-documented help for businesses and teams, from day-to-day IT to new software.</p>
-
-        <div class="grid grid-3">
-          <article class="card">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="m9 10 2 2 4-4"/></svg>
-            </div>
-            <h3>IT Support &amp; Microsoft 365</h3>
-            <p>I provide helpdesk support, network setup and Microsoft 365 administration that keep your people productive and your systems secure. Behind it are years of Windows Server, Active Directory, DNS and networking experience.</p>
-          </article>
-
-          <article class="card">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 9-4 3 4 3"/><path d="m16 9 4 3-4 3"/><path d="M12 3v2M12 19v2M5.6 5.6l1.4 1.4M17 17l1.4 1.4"/></svg>
-            </div>
-            <h3>AI Vibe Coding</h3>
-            <p>I turn your idea into working software quickly using AI-assisted development. I direct the architecture and security decisions myself, and I review and test every AI-generated change.</p>
-          </article>
-
-          <article class="card">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg>
-            </div>
-            <h3>Performance Testing with JMeter</h3>
-            <p>I find the bottlenecks in your application and infrastructure before your users do. I use JMeter load tests and work alongside your development and infrastructure teams to fix what I find.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= RESUME ================= -->
-    <section id="resume" aria-labelledby="resume-title">
-      <div class="container">
-        <span class="eyebrow">Resume</span>
-        <h2 id="resume-title">Experience &amp; qualifications</h2>
-        <p class="section-intro">Over 20 years across infrastructure, cloud, testing and software delivery, now focused on building and deploying AI applications.</p>
-
-        <div class="resume-block">
-          <h3>Experience</h3>
-          <ol class="timeline">
+        <div class="about-body">
+          <h3 class="sub-title" data-reveal>Experience</h3>
+          <ol class="timeline" data-reveal-group>
             <li>
-              <article class="card">
-                <div class="role-head">
-                  <div>
-                    <h4>Solo Developer</h4>
-                    <span class="employer">Services CRM (SaaS)</span>
-                  </div>
-                  <span class="dates"><time datetime="2025-06">Jun 2025</time> – Present</span>
-                </div>
-                <ul>
-                  <li><strong>Launched a live multi-tenant SaaS product</strong> covering enquiry, quoting, scheduling, invoicing and payment. I built it with React, Node.js, PostgreSQL and Docker.</li>
-                  <li><strong>Delivered about 22,000 lines across 54 commits</strong> using AI-assisted development with Claude Code. I directed the architecture and security decisions and reviewed every change.</li>
-                  <li><strong>Protected customer data with per-tenant isolation and hardened authentication.</strong> This included migrating from SQLite to PostgreSQL, adding CSRF protection and scrypt password hashing, and rate-limiting failed logins against credential stuffing. Three automated test suites cover the work.</li>
-                </ul>
-              </article>
+              <div class="role-head">
+                <h4>Solo Developer <span class="employer">Services CRM (SaaS)</span></h4>
+                <span class="dates"><time datetime="2025-06">Jun 2025</time> – Present</span>
+              </div>
+              <ul>
+                <li><strong>Launched a live multi-tenant SaaS product</strong> covering enquiry, quoting, scheduling, invoicing and payment, built with React, Node.js, PostgreSQL and Docker.</li>
+                <!-- CHECK: updated to 46,000 lines to match your latest edit; the old site said "about 22,000 lines across 54 commits" here -->
+                <li><strong>Shipped about 46,000 lines</strong> using AI-assisted development with Claude Code, directing the architecture and security decisions and reviewing every change.</li>
+                <li><strong>Protected customer data with per-tenant isolation and hardened authentication</strong>: migrated SQLite to PostgreSQL, added CSRF protection and scrypt password hashing, and rate-limited failed logins. Three automated test suites cover the work.</li>
+              </ul>
             </li>
             <li>
-              <article class="card">
-                <div class="role-head">
-                  <div>
-                    <h4>Performance Test Analyst</h4>
-                    <span class="employer">Ten10 Solutions Ltd</span>
-                  </div>
-                  <span class="dates"><time datetime="2024-10">Oct 2024</time> – <time datetime="2025-06">Jun 2025</time></span>
-                </div>
-                <ul>
-                  <li><strong>Improved application stability</strong> by using JMeter to find infrastructure bottlenecks.</li>
-                  <li><strong>Resolved complex performance issues</strong> in enterprise environments by investigating root causes.</li>
-                  <li><strong>Got performance issues fixed quickly</strong> by diagnosing them alongside the infrastructure, development and support teams.</li>
-                </ul>
-              </article>
+              <div class="role-head">
+                <h4>Performance Test Analyst <span class="employer">Ten10 Solutions Ltd</span></h4>
+                <span class="dates"><time datetime="2024-10">Oct 2024</time> – <time datetime="2025-06">Jun 2025</time></span>
+              </div>
+              <ul>
+                <li><strong>Improved application stability</strong> by using JMeter to find infrastructure bottlenecks.</li>
+                <li><strong>Resolved complex performance issues</strong> in enterprise environments by investigating root causes alongside infrastructure, development and support teams.</li>
+              </ul>
             </li>
             <li>
-              <article class="card">
-                <div class="role-head">
-                  <div>
-                    <h4>QA Lead</h4>
-                    <span class="employer">Ten10 Solutions Ltd</span>
-                  </div>
-                  <span class="dates"><time datetime="2023-08">Aug 2023</time> – <time datetime="2024-10">Oct 2024</time></span>
-                </div>
-                <ul>
-                  <li><strong>Raised deployment quality</strong> by developing automated testing solutions.</li>
-                  <li><strong>Improved the quality of enterprise software delivery</strong> through better testing and more automation.</li>
-                  <li><strong>Got defects resolved faster</strong> by identifying them early and communicating them clearly to developers and technical teams.</li>
-                </ul>
-              </article>
+              <div class="role-head">
+                <h4>QA Lead <span class="employer">Ten10 Solutions Ltd</span></h4>
+                <span class="dates"><time datetime="2023-08">Aug 2023</time> – <time datetime="2024-10">Oct 2024</time></span>
+              </div>
+              <ul>
+                <li><strong>Raised deployment quality</strong> by developing automated testing solutions.</li>
+                <li><strong>Got defects resolved faster</strong> by identifying them early and communicating them clearly to developers and technical teams.</li>
+              </ul>
             </li>
             <li>
-              <article class="card">
-                <div class="role-head">
-                  <div>
-                    <h4>Environment Manager</h4>
-                    <span class="employer">Ten10 Solutions Ltd</span>
-                  </div>
-                  <span class="dates"><time datetime="2015-10">Oct 2015</time> – <time datetime="2021-09">Sep 2021</time></span>
-                </div>
-                <ul>
-                  <li><strong>Kept a business-critical environment for over 500 users running</strong> as the primary escalation point for complex infrastructure, networking, firewall and load-balancing issues.</li>
-                  <li><strong>Managed over 300 virtual machines</strong> in a private cloud and handled deployments across development, test and production. I also supported AWS migration projects with minimal disruption to live services.</li>
-                  <li><strong>Streamlined day-to-day operations</strong> by automating infrastructure processes with PowerShell and Ansible. I also administered Windows Server, Active Directory, DNS, VMware, JIRA and Confluence.</li>
-                </ul>
-              </article>
+              <div class="role-head">
+                <h4>Environment Manager <span class="employer">Ten10 Solutions Ltd</span></h4>
+                <span class="dates"><time datetime="2015-10">Oct 2015</time> – <time datetime="2021-09">Sep 2021</time></span>
+              </div>
+              <ul>
+                <li><strong>Kept a business-critical environment for 500+ users running</strong> as the primary escalation point for infrastructure, networking, firewall and load-balancing issues.</li>
+                <li><strong>Managed 300+ virtual machines</strong> in a private cloud, handled deployments across dev, test and production, and supported AWS migrations with minimal disruption.</li>
+                <li><strong>Streamlined operations</strong> by automating infrastructure processes with PowerShell and Ansible, and administered Windows Server, Active Directory, DNS, VMware, JIRA and Confluence.</li>
+              </ul>
             </li>
             <li>
-              <article class="card">
-                <div class="role-head">
-                  <div>
-                    <h4>Employment History</h4>
-                    <span class="employer">Various</span>
-                  </div>
-                  <span class="dates"><time datetime="2001-10">Oct 2001</time> – <time datetime="2015-10">Oct 2015</time></span>
-                </div>
-                <ul>
-                  <li><strong>Additional experience available on request.</strong></li> 
-                 </ul>
-              </article>
+              <div class="role-head">
+                <h4>Earlier roles <span class="employer">Various</span></h4>
+                <span class="dates"><time datetime="2001-10">Oct 2001</time> – <time datetime="2015-10">Oct 2015</time></span>
+              </div>
+              <ul><li>Additional experience available on request.</li></ul>
             </li>
           </ol>
-          <!-- PLACEHOLDER: your CV notes "additional experience available on request" and has a gap from Sep 2021 to Aug 2023 -->
-          <!--<p class="hint" style="margin-top:20px"><span class="placeholder">[ADD EARLIER EXPERIENCE OR A NOTE ON SEP 2021 – AUG 2023, IF WANTED]</span></p>-->
-        </div>
+          <!-- PLACEHOLDER (optional): your CV has a gap from Sep 2021 to Aug 2023; add a line here if you want to explain it -->
 
-        <div class="resume-block">
-          <h3>Certifications &amp; education</h3>
-          <ul class="cert-list">
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>CompTIA A+<span class="sub">IT Career Switch, IT Technician Traineeship, 2026</span></span></li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>PRINCE2 Foundation &amp; Practitioner/span></li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Certified Professional – LoadRunner v8.1</span></li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>ISEB Software Testing Foundation<span class="sub">Also ISEB: Analysis &amp; Design Techniques; Systems Design and Implementation; ICT &amp; Business Systems Investigation</span></span></li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>CompTIA Network+, CompTIA Security+, Cisco CCNA <span class="status">In progress</span></span></li>
-            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>MEng Systems Engineering<span class="sub">Loughborough University, 1996 – 2001</span></span></li>
+          <h3 class="sub-title" data-reveal>Certifications &amp; education</h3>
+          <ul class="certs" data-reveal-group>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>CompTIA A+<small>IT Career Switch, IT Technician Traineeship, 2026</small></span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>PRINCE2 Foundation &amp; Practitioner</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>Certified Professional, LoadRunner v8.1</span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>ISEB Software Testing Foundation<small>Also ISEB: Analysis &amp; Design Techniques; Systems Design and Implementation; ICT &amp; Business Systems Investigation</small></span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>MEng Systems Engineering<small>Loughborough University, 1996 – 2001</small></span></li>
+            <li class="in-progress"><span class="badge">In progress</span><span>CompTIA Network+, CompTIA Security+, Cisco CCNA</span></li>
           </ul>
-        </div>
-
-        <div class="resume-block">
-          <h3>Skills</h3>
-          <div class="grid grid-3 skills">
-            <div class="card">
-              <h4>Infrastructure</h4>
-              <ul class="tags"><li>Windows Server</li><li>Linux</li><li>Active Directory</li><li>VMware</li><li>Hyper-V</li><li>DNS</li><li>DHCP</li><li>Backup &amp; Recovery</li><li>Environment Management</li></ul>
-            </div>
-            <div class="card">
-              <h4>Support &amp; Operations</h4>
-              <ul class="tags"><li>Microsoft 365</li><li>Incident Management</li><li>Root Cause Analysis</li><li>JIRA &amp; Confluence Admin</li><li>Release Management</li><li>PRINCE2</li></ul>
-            </div>
-            <div class="card">
-              <h4>Networking &amp; Security</h4>
-              <ul class="tags"><li>TCP/IP</li><li>Firewalls</li><li>F5 Load Balancers</li><li>Cisco IOS</li><li>Wireshark</li><li>Network Troubleshooting</li></ul>
-            </div>
-            <div class="card">
-              <h4>Cloud &amp; DevOps</h4>
-              <ul class="tags"><li>AWS</li><li>Azure</li><li>Docker</li><li>Kubernetes</li><li>Terraform</li><li>Ansible</li><li>Jenkins</li><li>CI/CD</li><li>Git &amp; GitHub</li></ul>
-            </div>
-            <div class="card">
-              <h4>Development &amp; AI</h4>
-              <ul class="tags"><li>Python</li><li>FastAPI</li><li>Node.js</li><li>React</li><li>JavaScript</li><li>PowerShell</li><li>PostgreSQL</li><li>RAG</li><li>LangChain</li><li>LangGraph</li><li>Claude API</li><li>Claude Code</li><li>Prompt Engineering</li></ul>
-            </div>
-            <div class="card">
-              <h4>Testing</h4>
-              <ul class="tags"><li>JMeter</li><li>LoadRunner</li><li>Performance Testing</li><li>Selenium</li><li>Playwright</li><li>Serenity BDD</li><li>pytest</li><li>Test Automation</li></ul>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
     <!-- ================= CONTACT ================= -->
-    <section id="contact" aria-labelledby="contact-title">
-      <div class="container">
-        <span class="eyebrow">Contact</span>
-        <h2 id="contact-title">Let's talk</h2>
-        <p class="section-intro">Whether you're hiring, need IT support or want an AI tool built, I'd be glad to hear from you.</p>
-
-        <div class="contact-grid">
-          <ul class="contact-list">
-            <li><a href="mailto:gavinknowles@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg><span><small>Email</small>gavinknowles@gmail.com</span></a></li>
-            <li><a href="https://www.linkedin.com/in/gavin-knowles-a7ba4b8/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-linkedin"/></svg><span><small>LinkedIn</small>gavin-knowles-a7ba4b8<span class="visually-hidden"> (opens in a new tab)</span></span></a></li>
-            <li><a href="https://github.com/elgdk77/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg><span><small>GitHub</small>elgdk77<span class="visually-hidden"> (opens in a new tab)</span></span></a></li>
+    <section class="section section--alt contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div data-reveal>
+          <p class="kicker"><span>04</span> Contact</p>
+          <h2 id="contact-title" class="contact-title">Let's talk<span class="accent">.</span></h2>
+          <p class="section-intro">Hiring for an AI developer, IT support or performance testing role? I'd be glad to hear from you.</p>
+          <a class="contact-email" href="mailto:gavinknowles@gmail.com" data-magnetic>gavinknowles@gmail.com<svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <ul class="contact-links">
+            <li><a href="https://www.linkedin.com/in/gavin-knowles-a7ba4b8/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="https://github.com/elgdk77/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg>GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+            <li><a href="Gavin_Knowles_CV.pdf" download><svg aria-hidden="true"><use href="#i-download"/></svg>Download CV</a></li>
           </ul>
-
-          <form id="contact-form" action="/api/contact" method="post" novalidate>
-            <div class="hp" aria-hidden="true">
-              <label for="cf-website">Leave this field empty</label>
-              <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off">
-            </div>
-            <div>
-              <label for="cf-name">Name</label>
-              <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-err">
-              <div class="error" id="cf-name-err" aria-live="polite"></div>
-            </div>
-            <div>
-              <label for="cf-email">Email</label>
-              <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-err">
-              <div class="error" id="cf-email-err" aria-live="polite"></div>
-            </div>
-            <div>
-              <label for="cf-message">Message</label>
-              <textarea id="cf-message" name="message" required aria-describedby="cf-message-err"></textarea>
-              <div class="error" id="cf-message-err" aria-live="polite"></div>
-            </div>
-            <div>
-              <button class="btn btn-primary" type="submit">
-                <svg aria-hidden="true"><use href="#i-mail"/></svg>
-                Send message
-              </button>
-            </div>
-            <p class="hint" id="cf-status" role="status" aria-live="polite"></p>
-          </form>
         </div>
+
+        <form id="contact-form" class="contact-form" action="/api/contact" method="post" novalidate data-reveal>
+          <div class="hp" aria-hidden="true">
+            <label for="cf-website">Leave this field empty</label>
+            <input id="cf-website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-err">
+            <p class="error" id="cf-name-err" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-err">
+            <p class="error" id="cf-email-err" aria-live="polite"></p>
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required aria-describedby="cf-message-err"></textarea>
+            <p class="error" id="cf-message-err" aria-live="polite"></p>
+          </div>
+          <button class="btn btn-primary" type="submit" data-magnetic><span>Send message</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container">
       <span>© <span id="year">2026</span> Gavin David Knowles</span>
-      <span>Norwich, UK</span>
+      <a href="#top">Back to top ↑</a>
     </div>
   </footer>
-
-  <script>
-    (function () {
-      // Mobile menu
-      var toggle = document.querySelector('.nav-toggle');
-      var menu = document.getElementById('nav-menu');
-      function setMenu(open) {
-        toggle.setAttribute('aria-expanded', String(open));
-        menu.classList.toggle('open', open);
-      }
-      toggle.addEventListener('click', function () {
-        var open = toggle.getAttribute('aria-expanded') !== 'true';
-        setMenu(open);
-        if (open) menu.querySelector('a').focus();
-      });
-      menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') { setMenu(false); toggle.focus(); }
-      });
-      document.addEventListener('click', function (e) {
-        if (!e.target.closest('.nav')) setMenu(false);
-      });
-
-      // Highlight current section in nav
-      var links = Array.prototype.slice.call(menu.querySelectorAll('a'));
-      if ('IntersectionObserver' in window) {
-        var obs = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-            links.forEach(function (a) {
-              if (a.getAttribute('href') === '#' + entry.target.id) a.setAttribute('aria-current', 'true');
-              else a.removeAttribute('aria-current');
-            });
-          });
-        }, { rootMargin: '-45% 0px -50% 0px' });
-        ['products', 'services', 'resume', 'contact'].forEach(function (id) { obs.observe(document.getElementById(id)); });
-      }
-
-      // Contact form: validate, then send via the server (Postmark)
-      var form = document.getElementById('contact-form');
-      var fields = {
-        name: { el: form.elements.name, msg: 'Please enter your name.' },
-        email: { el: form.elements.email, msg: 'Please enter a valid email address.' },
-        message: { el: form.elements.message, msg: 'Please enter a message.' }
-      };
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var firstInvalid = null;
-        Object.keys(fields).forEach(function (k) {
-          var f = fields[k];
-          var ok = f.el.value.trim() !== '' && f.el.checkValidity();
-          f.el.setAttribute('aria-invalid', String(!ok));
-          document.getElementById(f.el.id + '-err').textContent = ok ? '' : f.msg;
-          if (!ok && !firstInvalid) firstInvalid = f.el;
-        });
-        if (firstInvalid) { firstInvalid.focus(); return; }
-        var status = document.getElementById('cf-status');
-        var button = form.querySelector('button[type="submit"]');
-        button.disabled = true;
-        status.textContent = 'Sending…';
-        fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            name: fields.name.el.value.trim(),
-            email: fields.email.el.value.trim(),
-            message: fields.message.el.value.trim(),
-            website: form.elements.website.value
-          })
-        }).then(function (r) {
-          return r.json().catch(function () { return {}; }).then(function (data) {
-            if (!r.ok) throw new Error(data.error || 'Sorry, the message could not be sent.');
-          });
-        }).then(function () {
-          form.reset();
-          status.textContent = 'Thanks, your message has been sent. I\'ll get back to you soon.';
-        }).catch(function (err) {
-          status.textContent = (err && err.message ? err.message : 'Sorry, the message could not be sent.') + ' You can also email gavinknowles@gmail.com directly.';
-        }).then(function () { button.disabled = false; });
-      });
-
-      document.getElementById('year').textContent = new Date().getFullYear();
-    })();
-  </script>
 </body>
 </html>

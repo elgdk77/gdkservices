@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+<defs>
+<pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1d2027" stroke-width="1"/></pattern>
+<radialGradient id="glow" cx="75%" cy="20%" r="60%"><stop offset="0" stop-color="#c5f82a" stop-opacity=".16"/><stop offset="1" stop-color="#c5f82a" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1600" height="1000" fill="#0d0f13"/><rect width="1600" height="1000" fill="url(#g)"/><rect width="1600" height="1000" fill="url(#glow)"/>
+<g transform="translate(140 110)">
+<rect width="1320" height="860" rx="18" fill="#14171c" stroke="#2a2e36" stroke-width="2"/>
+<path d="M0 18a18 18 0 0 1 18-18h1284a18 18 0 0 1 18 18v46H0z" fill="#1a1d23"/>
+<circle cx="34" cy="32" r="7" fill="#3a3f49"/><circle cx="58" cy="32" r="7" fill="#3a3f49"/><circle cx="82" cy="32" r="7" fill="#3a3f49"/>
+<rect x="420" y="18" width="480" height="28" rx="14" fill="#0d0f13"/>
+<text x="660" y="38" fill="#a0a6b0" font-family="Menlo, monospace" font-size="15" text-anchor="middle">prompt-improver.gdkservices.co.uk</text>
+<g transform="translate(0 64)"><g transform="translate(40 40)">
+<rect width="600" height="700" rx="12" fill="#1a1d23" stroke="#2a2e36"/>
+<text x="28" y="48" fill="#a0a6b0" font-family="Menlo, monospace" font-size="18">original.prompt</text>
+<rect x="28" y="90" width="520" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="128" width="460" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="166" width="500" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="204" width="300" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="242" width="480" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="280" width="420" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="318" width="510" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="356" width="260" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="394" width="440" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="432" width="380" height="12" rx="6" fill="#3a3f49"/>
+<rect x="28" y="520" width="200" height="34" rx="17" fill="none" stroke="#ff9b8f" stroke-width="2"/>
+<text x="128" y="543" fill="#ff9b8f" font-family="Menlo, monospace" font-size="16" text-anchor="middle">inconsistent</text>
+</g>
+<g transform="translate(660 340)"><circle r="0" /><path d="M0 0h40m-14-14 14 14-14 14" stroke="#c5f82a" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(720 40)">
+<rect width="560" height="700" rx="12" fill="#1a1d23" stroke="#c5f82a" stroke-opacity=".6" stroke-width="2"/>
+<text x="28" y="48" fill="#c5f82a" font-family="Menlo, monospace" font-size="18">improved.prompt</text>
+<rect x="28" y="90" width="480" height="12" rx="6" fill="#f2f3ef"/><rect x="28" y="128" width="420" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="166" width="460" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="204" width="500" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="242" width="380" height="12" rx="6" fill="#f2f3ef"/><rect x="28" y="280" width="440" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="318" width="470" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="356" width="350" height="12" rx="6" fill="#f2f3ef"/><rect x="28" y="394" width="410" height="12" rx="6" fill="#3a3f49"/><rect x="28" y="432" width="300" height="12" rx="6" fill="#3a3f49"/>
+<rect x="28" y="520" width="170" height="34" rx="17" fill="#c5f82a"/>
+<text x="113" y="543" fill="#0a0b0d" font-family="Menlo, monospace" font-size="16" text-anchor="middle">1,284 tokens</text>
+</g></g>
+</g></svg>

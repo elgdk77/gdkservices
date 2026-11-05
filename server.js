@@ -10,13 +10,72 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const zlib = require('zlib');
 
 const PORT = process.env.PORT || 3000;
 const TOKEN = process.env.POSTMARK_SERVER_TOKEN;
 const FROM = process.env.CONTACT_FROM;
 const TO = process.env.CONTACT_TO || 'gavinknowles@gmail.com';
 const ROOT = __dirname;
-const PUBLIC_FILES = { '/': 'index.html', '/index.html': 'index.html' };
+const ASSETS = path.join(ROOT, 'assets');
+// Root-level files that may be served. Everything else public lives in /assets.
+const PUBLIC_FILES = {
+  '/': 'index.html',
+  '/index.html': 'index.html',
+  '/og-image.png': 'og-image.png',
+  '/Gavin_Knowles_CV.pdf': 'Gavin_Knowles_CV.pdf',
+  '/robots.txt': 'robots.txt',
+};
+const TYPES = {
+  '.html': 'text/html; charset=utf-8',
+  '.css': 'text/css; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8',
+  '.svg': 'image/svg+xml',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp',
+  '.avif': 'image/avif',
+  '.woff2': 'font/woff2',
+  '.pdf': 'application/pdf',
+  '.txt': 'text/plain; charset=utf-8',
+};
+const COMPRESSIBLE = new Set(['.html', '.css', '.js', '.svg', '.txt']);
+
+// Map a request path to a file on disk, or null. Blocks path traversal.
+function resolveFile(pathname) {
+  if (PUBLIC_FILES[pathname]) return path.join(ROOT, PUBLIC_FILES[pathname]);
+  if (!pathname.startsWith('/assets/')) return null;
+  let decoded;
+  try { decoded = decodeURIComponent(pathname.slice('/assets/'.length)); } catch { return null; }
+  const file = path.resolve(ASSETS, decoded);
+  return file.startsWith(ASSETS + path.sep) ? file : null;
+}
+
+function serveFile(req, res, file) {
+  const ext = path.extname(file).toLowerCase();
+  const type = TYPES[ext];
+  if (!type) { res.writeHead(404, { 'Content-Type': 'text/plain' }); return res.end('Not found'); }
+  fs.readFile(file, (err, data) => {
+    if (err) { res.writeHead(404, { 'Content-Type': 'text/plain' }); return res.end('Not found'); }
+    const headers = {
+      'Content-Type': type,
+      // HTML revalidates every time; assets are cached for a day.
+      'Cache-Control': ext === '.html' ? 'no-cache' : 'public, max-age=86400',
+      'X-Content-Type-Options': 'nosniff',
+      'Vary': 'Accept-Encoding',
+    };
+    let body = data;
+    const accept = req.headers['accept-encoding'] || '';
+    if (COMPRESSIBLE.has(ext) && data.length > 1024) {
+      if (/\bbr\b/.test(accept)) { body = zlib.brotliCompressSync(data, { params: { [zlib.constants.BROTLI_PARAM_QUALITY]: 6 } }); headers['Content-Encoding'] = 'br'; }
+      else if (/\bgzip\b/.test(accept)) { body = zlib.gzipSync(data); headers['Content-Encoding'] = 'gzip'; }
+    }
+    headers['Content-Length'] = body.length;
+    res.writeHead(200, headers);
+    res.end(req.method === 'HEAD' ? undefined : body);
+  });
+}
 
 // Simple per-IP rate limit: 5 messages per 10 minutes.
 const WINDOW_MS = 10 * 60 * 1000;
@@ -103,14 +162,10 @@ http.createServer((req, res) => {
     if (req.method !== 'POST') return sendJson(res, 405, { error: 'Method not allowed.' });
     return handleContact(req, res);
   }
-  const file = PUBLIC_FILES[url.pathname];
+  const file = resolveFile(url.pathname);
   if (!file || (req.method !== 'GET' && req.method !== 'HEAD')) {
     res.writeHead(404, { 'Content-Type': 'text/plain' });
     return res.end('Not found');
   }
-  fs.readFile(path.join(ROOT, file), (err, data) => {
-    if (err) { res.writeHead(500); return res.end('Server error'); }
-    res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-    res.end(req.method === 'HEAD' ? undefined : data);
-  });
+  serveFile(req, res, file);
 }).listen(PORT, () => console.log(`Listening on port ${PORT}`));
