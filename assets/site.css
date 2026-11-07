@@ -323,7 +323,7 @@ h2 { font-size: clamp(2rem, 6vw, 3.6rem); font-stretch: 112%; letter-spacing: -.
 
 /* ---------- Skills ---------- */
 .skill-grid { display: grid; gap: 16px; }
-@media (min-width: 900px) { .skill-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
+@media (min-width: 900px) { .skill-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; } }
 .skill-card {
   background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px;
   transition: border-color .3s, transform .4s var(--ease-out);

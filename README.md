@@ -8,7 +8,7 @@ The site is static HTML, CSS and JavaScript served by a small Node server that a
 
 - **Hero**: who I am and what I do
 - **Work**: project cards for Services CRM, Prompt Improver and AgenticAI (Document Q&A)
-- **Skills**: AI development, IT support & infrastructure, performance & quality testing, cloud & DevOps, operations & delivery
+- **Skills**: security & threat awareness, AI development, IT support & infrastructure, performance & quality testing, cloud & DevOps, operations & delivery
 - **About**: experience, certifications and education
 - **Contact**: a form that emails enquiries through Postmark
 
