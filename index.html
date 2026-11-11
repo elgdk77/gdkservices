@@ -6,8 +6,8 @@
   <title>Gavin Knowles | Trainee Cyber Security Analyst, IT Support Engineer &amp; AI Developer</title>
   <meta name="description" content="Gavin Knowles is a Norwich-based IT professional with 20+ years supporting and protecting business-critical systems, now seeking a Trainee Cyber Security Analyst role. CompTIA A+ certified, with a completed Cyber Security Traineeship.">
   <meta name="author" content="Gavin David Knowles">
-  <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#0a0b0d">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0a0b0d" id="theme-color">
 
   <!-- SEO / Open Graph (LinkedIn uses og:*). Site URL confirmed live at https://gdkservices.co.uk/ — change here if the domain moves. -->
   <link rel="canonical" href="https://gdkservices.co.uk/">
@@ -51,6 +51,14 @@
     // Mark JS as available so reveal styles apply; if the motion script never
     // starts (old browser, blocked file) the failsafe shows everything anyway.
     document.documentElement.className = 'js';
+    // Theme: dark by default; a saved choice from the header switch wins.
+    // Set here, before first paint, so a light-mode visitor never sees a dark flash.
+    (function () {
+      var t = 'dark';
+      try { if (localStorage.getItem('theme') === 'light') t = 'light'; } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t);
+      if (t === 'light') document.getElementById('theme-color').setAttribute('content', '#f6f6f1');
+    })();
     setTimeout(function () { if (!window.__motionReady) document.documentElement.classList.add('motion-failed'); }, 2500);
   </script>
   <script type="module" src="assets/site.js"></script>
@@ -66,6 +74,8 @@
     <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11Z"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
   </svg>
 
@@ -76,10 +86,20 @@
         <span class="brand-mark" aria-hidden="true">GK</span>
         <span class="brand-name">Gavin Knowles</span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
-        <span class="nav-toggle-bars" aria-hidden="true"></span>
-        <span>Menu</span>
-      </button>
+      <div class="nav-actions">
+        <button class="theme-switch" type="button" role="switch" aria-checked="true" aria-label="Dark mode">
+          <svg class="theme-switch-icon theme-switch-icon--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="theme-switch-icon theme-switch-icon--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          <span class="theme-switch-knob" aria-hidden="true">
+            <svg class="knob-sun"><use href="#i-sun"/></svg>
+            <svg class="knob-moon"><use href="#i-moon"/></svg>
+          </span>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+          <span>Menu</span>
+        </button>
+      </div>
       <ul class="nav-menu" id="nav-menu">
         <li><a href="#work">Work</a></li>
         <li><a href="#skills">Skills</a></li>

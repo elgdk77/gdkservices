@@ -8,6 +8,7 @@
 //   Project card tilt ........ initTilt()       [data-tilt]
 //   Magnetic buttons ......... initMagnetic()   [data-magnetic]
 //   Sticky nav highlight ..... initNav()
+//   Light/dark switch ........ initTheme()      header switch; initial theme is set inline in index.html
 import { animate, inView, scroll, stagger } from './vendor/motion-14.5.0.min.js';
 
 window.__motionReady = true;
@@ -96,7 +97,14 @@ function initHeroGrid() {
   if (!canvas) return;
   const hero = canvas.parentElement;
   const ctx = canvas.getContext('2d');
-  const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim() || '#c5f82a';
+  let dot = '', accent = '';
+  const readColours = () => {
+    const cs = getComputedStyle(document.documentElement);
+    dot = cs.getPropertyValue('--grid-dot').trim() || 'rgba(255,255,255,0.17)';
+    accent = cs.getPropertyValue('--accent-ink').trim() || '#c5f82a';
+  };
+  readColours();
+  document.addEventListener('themechange', () => { readColours(); draw(); });
   const GAP = 26, RADIUS = 150, PUSH = 7;
   let w = 0, h = 0, raf = 0;
   const p = { x: -1e4, y: -1e4, tx: -1e4, ty: -1e4, s: 0, ts: 0 }; // position + strength, eased
@@ -106,7 +114,7 @@ function initHeroGrid() {
     const cols = Math.ceil(w / GAP) + 1, rows = Math.ceil(h / GAP) + 1;
     const ox = (w % GAP) / 2, oy = (h % GAP) / 2;
     const hot = [];
-    ctx.fillStyle = 'rgba(255,255,255,0.17)';
+    ctx.fillStyle = dot;
     ctx.beginPath();
     for (let i = 0; i < cols; i++) {
       for (let j = 0; j < rows; j++) {
@@ -160,6 +168,26 @@ function initHeroGrid() {
     wake();
   });
   hero.addEventListener('pointerleave', () => { p.ts = 0; wake(); });
+}
+
+/* ---------- Theme switch (light/dark) ---------- */
+function initTheme() {
+  const root = document.documentElement;
+  const toggle = document.querySelector('.theme-switch');
+  const meta = document.getElementById('theme-color');
+  if (!toggle) return;
+  const apply = (theme) => {
+    root.setAttribute('data-theme', theme);
+    toggle.setAttribute('aria-checked', String(theme === 'dark'));
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0a0b0d' : '#f6f6f1');
+  };
+  apply(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+  toggle.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    apply(next);
+    try { localStorage.setItem('theme', next); } catch (e) { /* storage blocked: still works for this visit */ }
+    document.dispatchEvent(new Event('themechange'));
+  });
 }
 
 /* ---------- Nav: mobile menu, current-section highlight, scrolled border ---------- */
@@ -246,6 +274,7 @@ function initForm() {
   });
 }
 
+initTheme();
 initNav();
 initForm();
 initReveals();
