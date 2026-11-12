@@ -179,14 +179,19 @@ function initTheme() {
   const apply = (theme) => {
     root.setAttribute('data-theme', theme);
     toggle.setAttribute('aria-checked', String(theme === 'dark'));
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0a0b0d' : '#f6f6f1');
+    // Browser UI colour follows the page background, so --bg stays the single source.
+    if (meta) meta.setAttribute('content', getComputedStyle(root).getPropertyValue('--bg').trim());
+    document.dispatchEvent(new Event('themechange'));
   };
   apply(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
   toggle.addEventListener('click', () => {
     const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
     apply(next);
     try { localStorage.setItem('theme', next); } catch (e) { /* storage blocked: still works for this visit */ }
-    document.dispatchEvent(new Event('themechange'));
+  });
+  // Keep other open tabs in sync when the theme is changed in one of them.
+  window.addEventListener('storage', (e) => {
+    if (e.key === 'theme') apply(e.newValue === 'light' ? 'light' : 'dark');
   });
 }
 

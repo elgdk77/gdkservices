@@ -177,13 +177,15 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .theme-switch-knob {
   position: absolute; top: 3px; left: 3px; width: 26px; height: 26px; border-radius: 50%;
   display: grid; place-items: center; background: var(--accent); color: var(--on-accent);
-  transition: transform .3s var(--ease-out);
+  transform: translateX(30px); transition: transform .3s var(--ease-out);
 }
 .theme-switch-knob svg { width: 15px; height: 15px; }
-.theme-switch-knob .knob-moon { display: none; }
-.theme-switch[aria-checked="true"] .theme-switch-knob { transform: translateX(30px); }
-.theme-switch[aria-checked="true"] .knob-sun { display: none; }
-.theme-switch[aria-checked="true"] .knob-moon { display: block; }
+/* Knob position follows data-theme (set before first paint), not aria-checked
+   (set later by site.js), so it never slides on page load. */
+.theme-switch-knob .knob-sun { display: none; }
+:root[data-theme="light"] .theme-switch-knob { transform: none; }
+:root[data-theme="light"] .knob-sun { display: block; }
+:root[data-theme="light"] .knob-moon { display: none; }
 
 @media (min-width: 760px) {
   .nav-toggle { display: none; }
