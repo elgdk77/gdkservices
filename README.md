@@ -1,6 +1,6 @@
 # gdkservices
 
-Source for [gdkservices.co.uk](https://gdkservices.co.uk/), the single-page portfolio of Gavin Knowles: AI developer, IT support & infrastructure engineer and performance tester, based in Norwich, UK.
+Source for [gdkservices.co.uk](https://gdkservices.co.uk/), the single-page portfolio of Gavin Knowles: software developer and systems engineer, based in Gorleston, Norfolk, UK.
 
 The site is static HTML, CSS and JavaScript served by a small Node server that also relays contact-form messages via [Postmark](https://postmarkapp.com/). It has no npm dependencies and no build step.
 
@@ -8,7 +8,7 @@ The site is static HTML, CSS and JavaScript served by a small Node server that a
 
 - **Hero**: who I am and what I do
 - **Work**: project cards for Services CRM, Prompt Improver and AgenticAI (Document Q&A)
-- **Skills**: security & threat awareness, AI development, IT support & infrastructure, performance & quality testing, cloud & DevOps, operations & delivery
+- **Skills**: application development, APIs & integrations, databases, testing & quality, infrastructure & operations, cloud & DevOps, security & networking, AI-assisted development, collaboration & delivery
 - **About**: experience, certifications and education
 - **Contact**: a form that emails enquiries through Postmark
 
