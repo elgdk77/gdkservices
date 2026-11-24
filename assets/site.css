@@ -395,6 +395,35 @@ h2 { font-size: clamp(2rem, 6vw, 3.6rem); font-stretch: 112%; letter-spacing: -.
 .skill-strip h3 { font: 500 .8rem var(--font-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 12px; }
 .skill-strip .tags { margin: 0; }
 
+/* Links to the skill deep-dive pages (home Skills section and "More skills" on each page) */
+.skill-pages-title { margin-top: 48px; }
+.skill-pages { display: grid; gap: 16px; }
+@media (min-width: 760px) { .skill-pages { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; } }
+.skill-page-link {
+  display: flex; flex-direction: column; gap: 8px; padding: 22px 24px;
+  background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius);
+  text-decoration: none; transition: border-color .3s, transform .4s var(--ease-out);
+}
+.skill-page-link:hover { border-color: var(--accent-ink); transform: translateY(-3px); }
+.skill-page-link .label { font: 500 .72rem var(--font-mono); text-transform: uppercase; letter-spacing: .08em; color: var(--accent-ink); }
+.skill-page-link strong { display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 1.3rem; font-stretch: 112%; letter-spacing: -.01em; }
+.skill-page-link svg { width: 20px; height: 20px; flex: none; color: var(--accent-ink); transition: transform .3s var(--ease-out); }
+.skill-page-link:hover svg { transform: translateX(3px); }
+.skill-page-link .desc { color: var(--muted); font-size: .95rem; }
+
+/* ---------- Skill pages (skills/*.html) ---------- */
+.hero--page { min-height: 0; padding: 48px 0 32px; }
+@media (min-width: 900px) { .hero--page { padding: 72px 0 48px; } }
+.hero--page .hero-title { font-size: clamp(2.75rem, 10vw, 6.5rem); }
+.crumb {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-bottom: 16px;
+  font: 500 .8rem var(--font-mono); color: var(--muted); text-decoration: none; transition: color .2s;
+}
+.crumb svg { width: 16px; height: 16px; transition: transform .3s var(--ease-out); }
+.crumb:hover { color: var(--accent-ink); }
+.crumb:hover svg { transform: translateX(-3px); }
+.employer a { color: var(--accent-ink); }
+
 /* ---------- About ---------- */
 .about-grid { display: grid; gap: 48px; }
 @media (min-width: 980px) {
@@ -484,5 +513,5 @@ h2 { font-size: clamp(2rem, 6vw, 3.6rem); font-stretch: 112%; letter-spacing: -.
 /* Reduced motion: no hover transforms either. */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: .01ms !important; }
-  .project:hover .project-media img, .skill-card:hover, .btn:hover svg { transform: none; }
+  .project:hover .project-media img, .skill-card:hover, .skill-page-link:hover, .btn:hover svg { transform: none; }
 }

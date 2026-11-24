@@ -1,6 +1,6 @@
 # gdkservices
 
-Source for [gdkservices.co.uk](https://gdkservices.co.uk/), the single-page portfolio of Gavin Knowles: software developer and systems engineer, based in Gorleston, Norfolk, UK.
+Source for [gdkservices.co.uk](https://gdkservices.co.uk/), the portfolio of Gavin Knowles: software developer and systems engineer, based in Gorleston, Norfolk, UK.
 
 The site is static HTML, CSS and JavaScript served by a small Node server that also relays contact-form messages via [Postmark](https://postmarkapp.com/). It has no npm dependencies and no build step.
 
@@ -12,6 +12,12 @@ The site is static HTML, CSS and JavaScript served by a small Node server that a
 - **About**: experience, certifications and education
 - **Contact**: a form that emails enquiries through Postmark
 
+The Skills section links to three deep-dive pages in `skills/`, served at clean URLs:
+
+- `/skills/performance-testing`
+- `/skills/ai-development`
+- `/skills/it-support`
+
 ## Project structure
 
 ```
@@ -21,6 +27,7 @@ The site is static HTML, CSS and JavaScript served by a small Node server that a
 ├── package.json        # Start script and Node version (no dependencies)
 ├── og-image.png        # 1200×630 social sharing image
 ├── robots.txt
+├── skills/             # Skill deep-dive pages (performance testing, AI development, IT support)
 └── assets/
     ├── site.css        # All styles
     ├── site.js         # Scroll and reveal animations (ES module)
@@ -58,7 +65,7 @@ POSTMARK_SERVER_TOKEN=xxxx CONTACT_FROM="GDK Services <hello@yourdomain.com>" np
 
 ## How the server works
 
-- **Allow-listed files only.** It serves `/`, `index.html`, `og-image.png`, `robots.txt` and anything under `/assets/`. Every other path returns 404, and path traversal out of `assets/` is blocked.
+- **Allow-listed files only.** It serves `/`, `index.html`, `og-image.png`, `robots.txt`, the three `/skills/...` pages and anything under `/assets/`. Every other path returns 404, and path traversal out of `assets/` is blocked.
 - **Caching and compression.** HTML is sent with `no-cache`; other assets are cached for a day. Text responses over 1 KB are Brotli- or gzip-compressed according to `Accept-Encoding`.
 - **`POST /api/contact`** accepts JSON `{ name, email, message }` and:
   - rate-limits to 5 messages per IP per 10 minutes

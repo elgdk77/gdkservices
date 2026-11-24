@@ -25,6 +25,13 @@ const PUBLIC_FILES = {
   '/og-image.png': 'og-image.png',
   '/Gavin_Knowles_CV.pdf': 'Gavin_Knowles_CV.pdf',
   '/robots.txt': 'robots.txt',
+  // Skill pages: clean URLs, with the .html form also accepted
+  '/skills/performance-testing': 'skills/performance-testing.html',
+  '/skills/performance-testing.html': 'skills/performance-testing.html',
+  '/skills/ai-development': 'skills/ai-development.html',
+  '/skills/ai-development.html': 'skills/ai-development.html',
+  '/skills/it-support': 'skills/it-support.html',
+  '/skills/it-support.html': 'skills/it-support.html',
 };
 const TYPES = {
   '.html': 'text/html; charset=utf-8',

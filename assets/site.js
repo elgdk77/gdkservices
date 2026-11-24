@@ -214,6 +214,12 @@ function initNav() {
   });
   document.addEventListener('click', (e) => { if (!e.target.closest('.nav')) setMenu(false); });
 
+  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Section highlighting only applies on the home page; skill pages set aria-current in their HTML.
+  if (links.some((a) => a.pathname !== location.pathname)) return;
   const sections = ['top', ...links.map((a) => a.hash.slice(1))].map((id) => document.getElementById(id));
   const io = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -225,10 +231,6 @@ function initNav() {
     });
   }, { rootMargin: '-45% 0px -50% 0px' });
   sections.forEach((s) => s && io.observe(s));
-
-  const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
 }
 
 /* ---------- Contact form: validate, then send via server.js (Postmark) ---------- */

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en-GB" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Development | Gavin Knowles</title>
+  <meta name="description" content="Gavin Knowles builds AI agents, retrieval-augmented generation (RAG) services and prompt tooling with Python, FastAPI, LangChain, LangGraph and the Claude API, and uses Claude Code for AI-assisted development.">
+  <meta name="author" content="Gavin David Knowles">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0a0b0d" id="theme-color">
+
+  <link rel="canonical" href="https://gdkservices.co.uk/skills/ai-development">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Gavin Knowles">
+  <meta property="og:title" content="AI Development | Gavin Knowles">
+  <meta property="og:description" content="Gavin Knowles builds AI agents, retrieval-augmented generation (RAG) services and prompt tooling with Python, FastAPI, LangChain, LangGraph and the Claude API, and uses Claude Code for AI-assisted development.">
+  <meta property="og:url" content="https://gdkservices.co.uk/skills/ai-development">
+  <meta property="og:image" content="https://gdkservices.co.uk/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Gavin Knowles: Software Developer and Systems Engineer">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI Development | Gavin Knowles">
+  <meta name="twitter:description" content="Gavin Knowles builds AI agents, retrieval-augmented generation (RAG) services and prompt tooling with Python, FastAPI, LangChain, LangGraph and the Claude API, and uses Claude Code for AI-assisted development.">
+  <meta name="twitter:image" content="https://gdkservices.co.uk/og-image.png">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a0b0d'/%3E%3Ctext x='32' y='42' font-family='Menlo,monospace' font-size='26' font-weight='700' fill='%23c5f82a' text-anchor='middle'%3EGK%3C/text%3E%3C/svg%3E">
+
+  <link rel="preload" href="/assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/jetbrains-mono-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="modulepreload" href="/assets/vendor/motion-14.5.0.min.js">
+
+  <script>
+    // Same start-up as index.html: JS flag, saved theme before first paint, motion failsafe.
+    document.documentElement.className = 'js';
+    (function () {
+      var t = 'dark';
+      try { if (localStorage.getItem('theme') === 'light') t = 'light'; } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t);
+      if (t === 'light') document.getElementById('theme-color').setAttribute('content', '#f6f6f1');
+    })();
+    setTimeout(function () { if (!window.__motionReady) document.documentElement.classList.add('motion-failed'); }, 2500);
+  </script>
+  <script type="module" src="/assets/site.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="m11 18-6-6 6-6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">GK</span>
+        <span class="brand-name">Gavin Knowles</span>
+      </a>
+      <div class="nav-actions">
+        <button class="theme-switch" type="button" role="switch" aria-checked="true" aria-label="Dark mode">
+          <svg class="theme-switch-icon theme-switch-icon--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+          <svg class="theme-switch-icon theme-switch-icon--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          <span class="theme-switch-knob" aria-hidden="true">
+            <svg class="knob-sun"><use href="#i-sun"/></svg>
+            <svg class="knob-moon"><use href="#i-moon"/></svg>
+          </span>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+          <span>Menu</span>
+        </button>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/#skills" aria-current="true">Skills</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero hero--page" id="top" aria-labelledby="hero-title">
+      <canvas class="hero-grid" aria-hidden="true"></canvas>
+      <div class="container hero-inner">
+        <a class="crumb" href="/#skills" data-enter="0"><svg aria-hidden="true"><use href="#i-back"/></svg>All skills</a>
+        <h1 id="hero-title" class="hero-title">
+          <span class="line"><span data-enter="1">AI</span></span>
+          <span class="line"><span data-enter="2">development<span class="accent">.</span></span></span>
+        </h1>
+        <p class="hero-roles" data-enter="3">
+          <span>Claude API</span><span class="sep" aria-hidden="true">/</span><span>RAG &amp; agents</span><span class="sep" aria-hidden="true">/</span><span>Prompt engineering</span><span class="sep" aria-hidden="true">/</span><span>AI-assisted development</span>
+        </p>
+        <p class="hero-sub" data-enter="4">Building AI features that are reliable enough to depend on: agents, document Q&amp;A with cited sources, and prompt tooling, each with automated tests and with untrusted content handled safely. I also use Claude Code every day to build and ship software, directing the architecture and reviewing every change.</p>
+        <div class="hero-actions" data-enter="5">
+          <a class="btn btn-primary" href="/#contact" data-magnetic><span>Get in touch</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#experience" data-magnetic><span>See the experience</span></a>
+        </div>
+      </div>
+      <div class="container">
+        <dl class="stats" data-enter="7">
+          <div><dt>Open-source AI projects</dt><dd>2</dd></div>
+          <div><dt>Lines shipped via Claude Code</dt><dd>46k</dd></div>
+          <div><dt>Commits, each reviewed</dt><dd>120</dd></div>
+          <div><dt>pytest tests on AgenticAI</dt><dd>20</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="capabilities" aria-labelledby="cap-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="kicker"><span>01</span> What I do</p>
+          <h2 id="cap-title">Practical AI, built and tested like any other software</h2>
+          <p class="section-intro">From the prompt and the retrieval pipeline to the API, the tests and the security model around it.</p>
+        </header>
+        <div class="skill-grid" data-reveal-group>
+          <article class="skill-card">
+            <p class="skill-index" aria-hidden="true">A</p>
+            <h3>Agents & workflows</h3>
+            <p>Multi-step agent workflows that keep context across questions and stream answers back as they are generated.</p>
+            <ul class="tags" aria-label="Agents & workflows skills"><li>LangGraph</li><li>LangChain</li><li>Claude API</li><li>Anthropic SDK</li><li>Server-sent Events</li></ul>
+          </article>
+          <article class="skill-card">
+            <p class="skill-index" aria-hidden="true">B</p>
+            <h3>Retrieval (RAG)</h3>
+            <p>Ingestion pipelines that chunk, embed and store PDF, Word and text documents, so answers come from your own content and cite the document and page.</p>
+            <ul class="tags" aria-label="Retrieval (RAG) skills"><li>RAG</li><li>Chroma</li><li>Embeddings</li><li>Data Ingestion Pipelines</li><li>Citations</li></ul>
+          </article>
+          <article class="skill-card">
+            <p class="skill-index" aria-hidden="true">C</p>
+            <h3>Prompt engineering</h3>
+            <p>Diagnosing prompts that misbehave and rewriting them to be reliable, with a versioned prompt library and token counts checked before anything ships.</p>
+            <ul class="tags" aria-label="Prompt engineering skills"><li>Prompt Engineering</li><li>Prompt Versioning</li><li>Token Counting</li></ul>
+          </article>
+          <article class="skill-card">
+            <p class="skill-index" aria-hidden="true">D</p>
+            <h3>AI-assisted development</h3>
+            <p>Using Claude Code to build production software quickly while I direct the architecture and security decisions and review and test every change.</p>
+            <ul class="tags" aria-label="AI-assisted development skills"><li>Claude Code</li><li>Code Review</li><li>Automated Testing</li><li>Git &amp; GitHub</li></ul>
+          </article>
+        </div>
+        <div class="skill-strip" data-reveal>
+          <div>
+            <h3>Languages & frameworks</h3>
+            <ul class="tags" aria-label="Languages & frameworks"><li>Python</li><li>FastAPI</li><li>JavaScript</li><li>Node.js</li><li>React</li></ul>
+          </div>
+          <div>
+            <h3>AI stack</h3>
+            <ul class="tags" aria-label="AI stack"><li>Claude API</li><li>Anthropic SDK</li><li>LangChain</li><li>LangGraph</li><li>Chroma</li></ul>
+          </div>
+          <div>
+            <h3>Safety & security</h3>
+            <ul class="tags" aria-label="Safety & security"><li>Untrusted Content Handling</li><li>Upload Validation</li><li>Per-User Workspaces</li><li>Input Validation</li></ul>
+          </div>
+          <div>
+            <h3>Quality</h3>
+            <ul class="tags" aria-label="Quality"><li>pytest</li><li>Automated Test Suites</li><li>Reviewing AI-Generated Code</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience" aria-labelledby="exp-title">
+      <div class="container about-grid">
+        <header class="section-head about-head" data-reveal>
+          <p class="kicker"><span>02</span> Experience</p>
+          <h2 id="exp-title">AI features with the same engineering discipline as everything else</h2>
+          <div class="about-bio">
+            <p>I treat AI as one component of a system, not the whole of it. The model call sits behind a REST API, inside a tested workflow, with validation on what goes in and care over what comes out.</p>
+            <p>Document content and user uploads are treated as untrusted, each user gets a private workspace, and answers cite where they came from so people can check them.</p>
+            <p>The same approach runs through how I build software generally: Claude Code writes much of the code, and I own the design, the security decisions and the review of every change.</p>
+          </div>
+        </header>
+        <div class="about-body">
+          <h3 class="sub-title" data-reveal>Projects</h3>
+          <ol class="timeline" data-reveal-group>
+            <li>
+              <div class="role-head">
+                <h4>AgenticAI: Document Q&amp;A <span class="employer">Open source · <a href="https://github.com/elgdk77/AgenticAI" target="_blank" rel="noopener">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></span></h4>
+                <span class="dates">Python · FastAPI</span>
+              </div>
+              <ul>
+                <li><strong>A web service that answers plain-English questions about your own documents</strong>, citing the source document and page.</li>
+                <li><strong>A REST API and ingestion pipeline</strong> chunk, embed and store documents in Chroma for retrieval.</li>
+                <li><strong>A multi-step LangGraph workflow</strong> remembers earlier questions and streams answers back.</li>
+                <li><strong>Private workspaces per user</strong>, validated uploads and document content treated as untrusted, backed by 20 automated pytest tests.</li>
+              </ul>
+            </li>
+            <li>
+              <div class="role-head">
+                <h4>Prompt Improver <span class="employer">Open source · <a href="https://prompt-improver.gdkservices.co.uk/" target="_blank" rel="noopener">Live app<span class="visually-hidden"> (opens in a new tab)</span></a></span></h4>
+                <span class="dates">Python · Claude API</span>
+              </div>
+              <ul>
+                <li><strong>An AI agent that diagnoses weak or misbehaving prompts</strong> and rewrites them, explaining what changed and why.</li>
+                <li><strong>Turns inconsistent prompts into reliable, ready-to-copy ones</strong>, with a versioned prompt library and token counts before anything ships.</li>
+                <li><strong>FastAPI backend streaming results</strong> over server-sent events, tested with pytest.</li>
+              </ul>
+            </li>
+            <li>
+              <div class="role-head">
+                <h4>Services CRM <span class="employer">Live SaaS · built with Claude Code</span></h4>
+                <span class="dates"><time datetime="2025-06">Jun 2025</time> – Present</span>
+              </div>
+              <ul>
+                <li><strong>Delivered about 46,000 lines across 120 commits</strong> through Claude Code (AI-assisted development).</li>
+                <li><strong>Directed the architecture and security decisions</strong>, and reviewed and tested every change, backed by three automated test suites.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h3 class="sub-title" data-reveal>Foundations</h3>
+          <ul class="certs" data-reveal-group>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>MEng Systems Engineering<small>Loughborough University, 1996 – 2001</small></span></li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg><span>ISEB Software Testing Foundation<small>A testing background that shapes how I evaluate AI output</small></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="kicker"><span>03</span> Next</p>
+          <h2 id="contact-title">Want AI that actually works<span class="accent">.</span></h2>
+          <p class="section-intro">Thinking about adding AI to a product or workflow? I'd be glad to talk through what would be reliable and what would not.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/#contact" data-magnetic><span>Get in touch</span><svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-ghost" href="mailto:gavinknowles@gmail.com" data-magnetic><span>Email me</span></a>
+          </div>
+        </header>
+        <h3 class="sub-title" data-reveal>More skills</h3>
+        <div class="skill-pages" data-reveal-group>
+          <a class="skill-page-link" href="/skills/performance-testing">
+            <span class="label">Skills</span>
+            <strong>Performance testing<svg aria-hidden="true"><use href="#i-arrow"/></svg></strong>
+            <span class="desc">Load, stress and soak testing with LoadRunner and JMeter since 2001.</span>
+          </a>
+          <a class="skill-page-link" href="/skills/it-support">
+            <span class="label">Skills</span>
+            <strong>IT support<svg aria-hidden="true"><use href="#i-arrow"/></svg></strong>
+            <span class="desc">Escalation support, Windows Server, Active Directory and networking.</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span id="year">2026</span> Gavin David Knowles</span>
+      <a href="/">Home</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
